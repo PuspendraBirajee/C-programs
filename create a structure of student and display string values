@@ -1,0 +1,19 @@
+// create a structure of student and display string values
+#include<stdio.h>
+struct Student{
+	             char roll_no[100],name[100];
+	             double per;
+	             int bc;
+};
+typedef struct Student STD;
+// instead of this we can take above one struct Student s1,s2,s3;
+int main()
+{
+	STD s; //user defined
+	scanf("%s",s.roll_no);
+    scanf(" %[^\n]s",s.name);
+	scanf("%d",&s.bc);
+	scanf("%lf",&s.per);
+
+	printf("%s\n%s\n%f\n%d",s.roll_no,s.name,s.per,s.bc);
+}            
