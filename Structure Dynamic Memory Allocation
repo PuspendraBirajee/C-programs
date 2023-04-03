@@ -1,0 +1,16 @@
+// Dynamic Memory Allocation
+#include<stdio.h>
+#include<stdlib.h> //headerfile while using malloc
+struct Student{
+	int bc;
+	char roll[20];
+};
+typedef struct Student STD;
+int main(){
+	STD *s;
+	s=(STD *)malloc(sizeof(STD));
+  	scanf("%d",&s->bc);
+    scanf("%s",s->roll);
+  	printf("%d\n%s",s->bc,s->roll);
+ 
+}
