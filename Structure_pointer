@@ -1,0 +1,23 @@
+// structure
+#include<stdio.h>
+#include<stdlib.h>
+struct Student{
+	char roll[20];
+	char name[20];
+	int age;
+	float cgpa;
+};
+void printstructure(struct Student *s){
+	printf("%s %s %d %.2f",s->roll,s->name,s->age,s->cgpa);
+}
+int main()
+{
+	struct Student s;
+	struct Student *s_ptr;
+	s_ptr=&s;
+	scanf("%[^\n]s",s_ptr->roll);
+	scanf(" %[^\n]s",s_ptr->name);
+	scanf("%d",&s_ptr->age);
+	scanf("%f",&s_ptr->cgpa);
+	printstructure(s_ptr);
+}
